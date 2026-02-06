@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>InftyThink: Breaking the Length Limits of Long-Context Reasoning in Large Language Models</title>
+  <!--  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">-->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://github.com/ZJU-REAL">
+        <span class="icon">
+            <i class="fab fa-github"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <!-- 导航项将在这里动态加载 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">InftyThink+: Effective and Efficient Infinite-Horizon Reasoning via Reinforcement Learning</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="mailto:yanyuchen@zju.edu.cn" target="_blank">Yuchen Yan</a><sup>1,2,*</sup>,
+              </span>
+
+              <span class="author-block">
+                Liang Jiang<sup>2</sup>,
+              </span>
+
+              <span class="author-block">
+                Jin Jiang<sup>3</sup>,
+              </span>
+
+              <span class="author-block">
+                Shuaicheng Li<sup>2</sup>,
+              </span>
+
+              <br>
+
+              <span class="author-block">
+                Zujie Wen<sup>2</sup>,
+              </span>
+
+              <span class="author-block">
+                Zhiqiang Zhang<sup>2</sup>,
+              </span>
+
+              <span class="author-block">
+                Jun Zhou<sup>2</sup>,
+              </span>
+
+              <span class="author-block">
+                <a href="mailto:jshao@zju.edu.cn" target="_blank">Jian Shao</a><sup>1,†</sup>,
+              </span>
+
+              <span class="author-block">
+                Yueting Zhuang<sup>1</sup>,
+              </span>
+
+              <span class="author-block">
+                <a href="mailto:syl@zju.edu.cn" target="_blank">Yongliang Shen</a><sup>1,†</sup>
+              </span>
+            </div>
+
+            <br>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Zhejiang University </span>
+              <span class="author-block"><sup>2</sup>Ant Group</span>
+              <span class="author-block"><sup>3</sup>Peking University</span>
+              <br>
+              <span class="author-block">Preprint. Under review.</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Work done during internship at Ant
+                  Group.<sup>†</sup>Corresponding Author</small></span>
+            </div>
+
+            <!-- Github link -->
+            <span class="link-block">
+              <a href="https://github.com/ZJU-REAL/InftyThink-Plus" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+
+            <!-- ArXiv abstract Link -->
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2503.06692" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+
+            <!-- <span class="link-block">
+              <a href="https://huggingface.co/datasets/ZJU-REAL/InftyThink" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <p style="font-size:18px">🤗</p>
+                </span>
+                <span>Dataset</span>
+              </a>
+            </span> -->
+
+                      
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+
+  <!-- Teaser video-->
+  <!--<section class="hero teaser">-->
+  <!--  <div class="container is-max-desktop">-->
+  <!--    <div class="hero-body">-->
+  <!--      <video poster="" id="tree" autoplay controls muted loop height="100%">-->
+  <!--        &lt;!&ndash; Your video here &ndash;&gt;-->
+  <!--        <source src="static/videos/banner_video.mp4"-->
+  <!--        type="video/mp4">-->
+  <!--      </video>-->
+  <!--      <h2 class="subtitle has-text-centered">-->
+  <!--        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. -->
+  <!--      </h2>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</section>-->
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/paradigm.png" style="width: 100%; max-height: 600px; object-fit: cover; border-radius: 10px; margin-bottom: 1.5rem;">
+        <h2 class="subtitle has-text-centered">
+          Illustration of <b>InftyThink</b> versus vanilla long-context reasoning.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Large reasoning models achieve strong performance by scaling inference-time chain-of-thought, but this paradigm suffers from quadratic cost, context length limits, and degraded reasoning due to lost-in-the-middle effects. Iterative reasoning mitigates these issues by periodically summarizing intermediate thoughts, yet existing methods rely on supervised learning or fixed heuristics and fail to optimize when to summarize, what to preserve, and how to resume reasoning. We propose InftyThink+, an end-to-end reinforcement learning framework that optimizes the entire iterative reasoning trajectory, building on model-controlled iteration boundaries and explicit summarization. InftyThink+ adopts a two-stage training scheme with supervised cold-start followed by trajectory-level reinforcement learning, enabling the model to learn strategic summarization and continuation decisions. Experiments on DeepSeek-R1-Distill-Qwen-1.5B show that InftyThink+ improves accuracy by 21% on AIME24 and outperforms conventional long chain-of-thought reinforcement learning by a clear margin, while also generalizing better to out-of-distribution benchmarks. Moreover, InftyThink+ significantly reduces inference latency and accelerates reinforcement learning training, demonstrating improved reasoning efficiency alongside stronger performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <section class="hero is small">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title is-3">Cold Start</h2>
+        <p>
+          Before applying RL, we perform a cold-start stage that teaches the model the basic format of InftyThink-style reasoning. Specifically, we transform existing supervised data into InftyThink format and fine-tune the model to produce multi-iteration outputs with explicit summaries. 
+        </p>
+        <img src="static/images/cold-start.png"
+          alt="Systematic pipeline for reconstructing vanilla-style long-context reasoning data into the InftyThink-style format."
+          style="width: 100%; max-height: 600px; object-fit: cover; border-radius: 10px; margin-bottom: 1.5rem;">
+        <p>
+          Systematic pipeline for reconstructing vanilla-style long-context reasoning data into the InftyThink-style format. <b>I.</b> Original reasoning processes are partitioned into optimally sized fragments based on parameter ($\eta$), preserving semantic coherence. <b>II.</b> Qwen3-4B-Instruct-2507 generates concise yet comprehensive summaries for each reasoning fragment. <b>III.</b> The original fragments and their generated summaries are systematically recombined to create InftyThink-style training instances that teach the model to reason iteratively.
+        </p>
+        <br>
+        <p>
+          Each instance is organized to align with the InftyThink reasoning paradigm and is defined as follows:
+            $$
+            (q, \textcolor{NavyBlue}{r}, \textcolor{Green}{c})
+            \xrightarrow{\eta,\ \gamma}
+            \begin{cases} 
+              (q, \textcolor{NavyBlue}{r_1}, \textcolor{CarnationPink}{s_1})
+              & \text{for } i = 1, \\[6pt]
+
+              (q, \textcolor{CarnationPink}{s_{i-1}}, \textcolor{NavyBlue}{r_i},
+              \textcolor{CarnationPink}{s_i})
+              & \text{for } 1 < i < n, \\[6pt]
+
+              (q, \textcolor{CarnationPink}{s_{n-1}}, \textcolor{NavyBlue}{r_n},
+              \textcolor{Green}{c})
+              & \text{for } i = n.
+            \end{cases}
+            $$
+      </p>
+      <p>
+        At the initial iteration ($i=1$), the model is trained to generate the first reasoning segment along with its corresponding summary. For intermediate iterations ($1 \lt i \lt n$), the model learns to condition on the previously generated summary to extend the reasoning process and produce an updated summary. In the final iteration ($i=n$), the model is guided to leverage the last summary to complete the reasoning and output the final conclusion.
+      </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="hero is is-light">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title is-3">Reinforcement Learning</h2>
+        <p>
+          The cold-start stage teaches format; reinforcement learning teaches strategy. We now describe how RL is adapted to the unique structure of InftyThink reasoning, where a single problem induces a trajectory of multiple generations connected through summaries.  
+        </p>
+        <br>
+        <h3 class="title is-4">Trajectory-level Rollout</h3>
+        <p>
+          Given query $q$, we roll out the model iteratively: at each iteration $j$, we construct the prompt from $q$ and the previous summary $s_{j-1}$ (empty if $j = 1$), generate output $o_j$, and extract any summary for the next iteration.
+          Rollout terminates when: (i) the model produces a conclusion instead of a summary, (ii) the model fails to produce valid InftyThink format, or (iii) the iteration count reaches $\varphi$. The $i$-th sampled trajectory for query $q$ is denoted as:
+        </p>
+        <p>
+          $$\mathcal{O}_i = \{o_i^1, o_i^2, \ldots, o_i^{n_i}\}, \quad n_i \leq \varphi.$$
+        </p>
+        <h3 class="title is-4">Reward Design</h3>
+        <p>
+          We primarily introduce two types of rewards: a task reward, which assesses whether the model successfully solves the given problem, and an efficiency reward, which measures how efficiently the model arrives at a solution. Our reward assignment is performed at the trajectory level: for a trajectory $O_i$, all round-wise outputs $o_i^j$ share the same scalar reward. 
+        </p>
+        <p>
+          The task reward evaluates correctness by verifying the final output against the ground truth:
+          $$\mathcal{R}_{\text{task}}(\mathcal{O}_i) = \mathbb{I}\left[\operatorname{Verify}(o_i^{n_i}, \text{gt}) = \text{Correct}\right],$$
+        </p>
+        <p>
+          The efficiency reward encourages solving problems in fewer iterations when possible. We adopt a quadratic decay that penalizes additional iterations more heavily as the count grows:
+          $$\mathcal{R}_{\text{eff}}(\mathcal{O}_i) = 1 - \left(\frac{n_i - 1}{\varphi}\right)^2.$$
+        </p>
+        <p>
+          We combine the two rewards multiplicatively:
+          $$\mathcal{R}(\mathcal{O}_i) = \mathcal{R}_{\text{task}}(\mathcal{O}_i) \cdot \mathcal{R}_{\text{eff}}(\mathcal{O}_i).$$
+        </p>
+        <h3 class="title is-4">Policy Gradient</h3>
+        
+        <p>
+          We adopt Group Relative Policy Optimization (GRPO) as our base RL algorithm. For a given query $q$, we sample $G$ reasoning trajectories, each consisting of multiple rounds of generation. All outputs across all iterations are optimized jointly using token-level loss averaging:
+          $$
+          \mathcal{J}(\theta) = \mathbb{E}_{\{\mathcal{O}_i\}_{i=1}^{G} \sim \pi_{\theta_{\text{old}}}(\cdot \mid q), \{o_i^j\}_{j=1}^{n_i} \sim \mathcal{O}_i} \left[ \frac{1}{\sum_{i=1}^G\sum_{j=1}^{n_i}|o_i^j|} \sum_{i=1}^{G} \underbrace{\sum_{j=1}^{n_i} \overbrace{\mathcal{U}(o_i^j;\theta)}^{\text{round loss}}}_{\text{trajectory loss}} \right],
+          $$ 
+          where $|o_i^j|$ denotes the number of tokens in output $o_i^j$, and $\mathcal{U}(o; \theta)$ is the clipped surrogate objective:
+          $$
+          \mathcal{U}(o;\theta) =\sum_{t=1}^{|o|} \min\left(r_\theta(o_t) \hat{A}_t,\text{clip}(r_\theta(o_t), 1-\epsilon_{\text{low}}, 1+\epsilon_{\text{high}})\hat{A}_t \right),
+          $$
+          Here $r_\theta(o_t) = \pi_\theta(o_t) / \pi_{\theta_{\text{old}}}(o_t)$ is the importance sampling ratio for token $o_t$, $\epsilon_{\text{low}}$ and $\epsilon_{\text{high}}$ are clipping thresholds, and $\hat{A}_t$ is the advantage estimate for token $t$.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is small">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title is-3">Results</h2>
+        <p>
+
+        </p>
+        <img src="static/images/main-result.png" alt="Main experimental results of CoT-Bridge"
+          style="width: 100%; max-height: 800px; object-fit: cover; border-radius: 10px; margin-bottom: 1.5rem;">
+        <p>
+          Our main experimental results. The results are obtained by sampling the model 32 times with a temperature of 0.7. ACC stands for average accuracy (%), TOK stands for average number of generated tokens (K), and LAT stands for average inference time in seconds. × denotes the setting with cold start only, without RL.
+          √ T denotes the RL setting where only the task reward is used.
+          √ T+E denotes the RL setting where both the task reward and the efficiency reward are used.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<!-- Image carousel-->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <div class="carousel-content">
+            <h2 class="title is-3 has-text-centered">Learning When to Compress</h2>
+            <div class="image-container">
+              <img src="static/images/ab1.png" />
+            </div>
+            <div class="caption-container">
+              <h2 class="subtitle has-text-centered">
+                Comparison of benchmark performance (%) across different summary timing strategies.
+              </h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <div class="carousel-content">
+            <h2 class="title is-3 has-text-centered">Learning When to Compress</h2>
+            <div class="image-container">
+              <img src="static/images/ab1.png" />
+            </div>
+            <div class="caption-container">
+              <h2 class="subtitle has-text-centered">
+                Comparison of benchmark performance (%) across different summary timing strategies.
+              </h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .carousel-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 20px;
+    }
+
+    .image-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .image-container img {
+      max-height: 400px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .caption-container {
+      margin-bottom: 40px; /* Increase space between caption and pagination dots */
+    }
+
+    .carousel .item {
+      height: 100%;
+    }
+
+    .carousel-content .title {
+      margin-bottom: 1rem;
+    }
+  </style>
+</section> -->
+
+  <section class="section is-light" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>TBD</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+  <script>
+    window.HELP_IMPROVE_VIDEOJS = false;
+
+    async function loadNavItems() {
+      try {
+        const response = await fetch('https://zju-real.github.io/paper-meta-info/meta.csv');
+        const csvText = await response.text();
+
+        // 简单的CSV解析
+        const rows = csvText.split('\n')
+          .map(row => row.trim())
+          .filter(row => row) // 移除空行
+          .map(row => {
+            const [name, url] = row.split(',').map(cell => cell.trim());
+            return { name, url };
+          });
+
+        return rows;
+      } catch (error) {
+        console.error('Error loading navigation items:', error);
+        return [];
+      }
+    }
+
+    $(document).ready(async function () {
+      // 加载导航项
+      const navItems = await loadNavItems();
+      const navDropdown = $('.navbar-dropdown');
+
+      // 清空现有的导航项
+      navDropdown.empty();
+
+      // 添加新的导航项
+      navItems.forEach(item => {
+        const navItem = $('<a></a>')
+          .addClass('navbar-item')
+          .attr('href', item.url)
+          .text(item.name);
+        navDropdown.append(navItem);
+      });
+
+      // carousel初始化代码
+      var options = {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        loop: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+      }
+
+      var carousels = bulmaCarousel.attach('.carousel', options);
+      bulmaSlider.attach();
+    });
+  </script>
+</body>
+
+</html>
