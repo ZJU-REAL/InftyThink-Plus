@@ -20,7 +20,7 @@ Yueting Zhaung<sup>1</sup>, &nbsp;
 <sup>2</sup>Ant Group, &nbsp;
 <sup>3</sup>Peking University  
 <em>Preprint. Under review.</em>  
-<sup>*</sup>Contribution during internship at Ling Team, Ant Group. <sup>†</sup>Corresponding Author
+<sup>*</sup>Contribution during internship at Ant Group. <sup>†</sup>Corresponding Author
 </div>
 
 <!-- <p align="center">
