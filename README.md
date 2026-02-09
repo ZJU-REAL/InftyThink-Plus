@@ -12,7 +12,7 @@ Shuaicheng Li<sup>2</sup>, &nbsp;
 Zujie Wen<sup>2</sup>, &nbsp;
 Zhiqiang Zhang<sup>2</sup>, &nbsp;
 Jun Zhou<sup>2</sup>, &nbsp;
-[Jian Shao](mailto:jshao@zju.edu.cn)<sup>1</sup>, &nbsp;
+[Jian Shao](mailto:jshao@zju.edu.cn)<sup>1,†</sup>, &nbsp;
 Yueting Zhaung<sup>1</sup>, &nbsp;
 [Yongliang Shen](mailto:syl@zju.edu.cn)<sup>1,†</sup>  
 
