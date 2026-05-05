@@ -19,7 +19,7 @@ Yueting Zhaung<sup>1</sup>, &nbsp;
 <sup>1</sup>Zhejiang University, &nbsp;
 <sup>2</sup>Ant Group, &nbsp;
 <sup>3</sup>Peking University  
-<em>Preprint. Under review.</em>  
+<em>ICML 2026</em>  
 <sup>*</sup>Contribution during internship at Ant Group. <sup>†</sup>Corresponding Author
 </div>
 
