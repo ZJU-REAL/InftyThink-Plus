@@ -1,0 +1,39 @@
+
+{
+    "load": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "save": "./megatron_qwen",
+    "save_interval": 1000,
+    "log_interval": 1,
+    "wandb_project": "InftyThink-Plus",
+    "loss_scale": "inftythink",
+
+    "dataset": "../OpenThoughts-114k-seg-6k-inftythink-train.jsonl",
+    "add_version": false,
+
+    "model_type": "deepseek_r1_distill",
+    
+    "max_epochs": 3,
+    "max_length": 32768,
+
+    "packing": true,
+    "finetune": true,
+    "dataset_num_proc": 64,
+
+    "tensor_model_parallel_size": 2,
+    "sequence_parallel": true,
+
+    "micro_batch_size": 1,
+    "global_batch_size": 8,
+
+    "lr": 2e-5,
+    "min_lr": 0,
+    "lr_warmup_fraction": 0.03,
+    "lr_decay_style": "cosine",
+
+    "recompute_granularity": "full",
+    "recompute_method": "uniform",
+    "recompute_num_layers": 1,
+
+    "attention_backend": "flash",
+    "cross_entropy_loss_fusion": true
+}
