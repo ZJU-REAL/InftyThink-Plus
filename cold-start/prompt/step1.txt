@@ -1,0 +1,9 @@
+Please summarize the reasoning and conclusions you reached in your previous truncated response. Here are the specific requirements:
+
+1. You need to summarize the key steps and corresponding important conclusions you took in all the reasoning processes in chronological order;
+2. You need to summarize the steps and conclusions that helped to ultimately solve the problem;
+3. You do not need to provide the final answer or any additional notes;
+4. Please summarize as concisely as possible, but do not omit any important steps or conclusions;
+5. Please note that your reasoning may not be complete;
+6. Please do not provide any reasoning or conclusions that were not presented.
+7. Please use '*' to list all summaries.
